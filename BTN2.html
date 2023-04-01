@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BTN-2</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .wrapper {
+            height: 100vh;
+            width: 100vw;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: wheat;
+        }
+
+        .btn-pink {
+            background: rgb(255, 255, 255);
+            border: 2px solid #333;
+            color: #333;
+            padding: 0.8rem 1rem;
+            text-decoration: none;
+            font-family: sans-serif;
+            letter-spacing: 2px;
+            position: relative;
+            transition: all .35s;
+        }
+
+        span {
+            position: relative;
+            z-index: 1;
+        }
+
+        .btn-pink:after {
+            position: absolute;
+            content: "";
+            top: 0px;
+            left: 0px;
+            right: 0px;
+            bottom: 0px;
+            background: #ff003b;
+            transition: all .75s;
+            transform-origin: left;
+            transform: scaleX(0);
+        }
+
+        .btn-pink:hover:after {
+            transform: scaleX(1);
+        }
+
+        .btn-pink:hover {
+            color: #fff;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <a class="btn-pink" href="#"><span>Hover Me!</span></a>
+    </div>
+</body>
+
+</html>
